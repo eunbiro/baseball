@@ -10,6 +10,7 @@ public class CheckNum {
 	int[] ramNum = randomNum.getRandomNum();
 	int stkNum = 0;
 	int ballNum = 0;
+	int count = 0;
 
 	Scanner scanner = new Scanner(System.in);
 	
@@ -22,17 +23,18 @@ public class CheckNum {
 			String scan = scanner.next();
 			
 			if (scan.length() == 4) {
-				
+				System.out.println("======================");
+				System.out.print("입력하신 숫자 : ");
 				for (int i = 0; i < 4; i++) {
 					char charScan = scan.charAt(i);
 					inputNum[i] = charScan - '0';
-					System.out.print(inputNum[i] + " ");
+					System.out.print("" + inputNum[i] + " ");
 					
 				}
 			} else {
-				System.out.println("********************");
+				System.out.println("======================");
 				System.out.println(" 4자리 숫자만 입력해주세요.");
-				System.out.println("********************");
+				System.out.println("======================");
 				continue;
 			}
 			
@@ -50,14 +52,17 @@ public class CheckNum {
 			System.out.println("\n>> " + stkNum + " 스트라이크 | " + ballNum + " 볼");
 			
 			if (stkNum == 4) {
-				System.out.println("====================");
-				System.out.println(" 정답입니다!");
+				System.out.println("======================");
+				System.out.println("  ☆★☆★정답입니다!☆★☆★");
+				count++;
+				System.out.println("  시도횟수는 " + count + "번 입니다!");
 				break;
 			} else {
-				System.out.println("====================");
-				System.out.println("   다시 시도해주세요!");
-				System.out.println("====================");
+				System.out.println("======================");
+				System.out.println("    다시 시도해주세요!");
+				System.out.println("======================");
 				System.out.print(">");
+				count++;
 			}
 			
 			stkNum = 0;
