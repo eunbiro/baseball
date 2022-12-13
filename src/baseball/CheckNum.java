@@ -15,16 +15,16 @@ public class CheckNum {
 	Scanner scanner = new Scanner(System.in);
 	
 	public void getCheckNum() {
-		System.out.println("======================");
-		System.out.println(" 4자리 숫자를 입력해 주세요.");
-		System.out.println("======================");
+		System.out.println("=========================");
+		System.out.println("  4자리 숫자를 입력해 주세요.");
+		System.out.println("=========================");
 		System.out.print(">");
 		while (true) {
 			String scan = scanner.next();
 			
 			if (scan.length() == 4) {
-				System.out.println("======================");
-				System.out.print("입력하신 숫자 : ");
+				System.out.println("=========================");
+				System.out.print(" 입력하신 숫자 : ");
 				for (int i = 0; i < 4; i++) {
 					char charScan = scan.charAt(i);
 					inputNum[i] = charScan - '0';
@@ -32,9 +32,9 @@ public class CheckNum {
 					
 				}
 			} else {
-				System.out.println("======================");
+				System.out.println("=========================");
 				System.out.println(" 4자리 숫자만 입력해주세요.");
-				System.out.println("======================");
+				System.out.println("=========================");
 				continue;
 			}
 			
@@ -49,18 +49,20 @@ public class CheckNum {
 					}
 				}
 			}
-			System.out.println("\n>> " + stkNum + " 스트라이크 | " + ballNum + " 볼");
+			System.out.println("\n " + stkNum + " 스트라이크 | " + ballNum + " 볼");
 			
 			if (stkNum == 4) {
-				System.out.println("======================");
-				System.out.println("  ☆★☆★정답입니다!☆★☆★");
+				System.out.println("=========================");
+				System.out.println("    ☆★☆★정답입니다!☆★☆★");
 				count++;
 				System.out.println("  시도횟수는 " + count + "번 입니다!");
+				System.out.println();
+				System.out.println();
 				break;
 			} else {
-				System.out.println("======================");
-				System.out.println("    다시 시도해주세요!");
-				System.out.println("======================");
+				System.out.println("=========================");
+				System.out.println("      다시 시도해주세요!");
+				System.out.println("=========================");
 				System.out.print(">");
 				count++;
 			}
